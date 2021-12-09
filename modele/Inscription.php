@@ -1,8 +1,11 @@
 <?php
-require_once('./Modele.php');
 
 
-class User extends Database
+
+require_once('./modele/Modele.php');
+require_once('./modele/Check.php');
+
+class Inscription extends Database
 {
 
     private $pseudo;
@@ -11,7 +14,7 @@ class User extends Database
 
     protected $status;                   // admin, chroniqueur, utilisateur, visiteur
 
-    protected function __construct($pseudo, $email, $password, $passwordConfirm, $status)
+    public function __construct($pseudo, $email, $password, $passwordConfirm, $status)
     {
         check::checkIsset($pseudo, $email, $password, $status);
         check::checkEmpty($pseudo, $email, $password, $status);
@@ -28,8 +31,8 @@ class User extends Database
     public function set(){
 
         $query = 'INSERT INTO user(pseudo, email, password, status) VALUES(?,?,?,?)';
-        $stmt = $this->dbb->prepare($query);
-        $stmt->execute(array($this->pseudo, $$this->email, $$this->password, $$this->status));
+        $stmt = self::connect()->prepare($query);
+        $stmt->execute(array($this->pseudo, $this->email, $this->password, $this->status));
 
     }
 

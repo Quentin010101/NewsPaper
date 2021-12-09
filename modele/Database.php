@@ -2,13 +2,15 @@
 
 class Database
 {
-    private $username = 'root';
-    private $password = '';
-    protected $dbb;
+    
+    public static function connect(){
 
-    public function __construct(){
+        $username = 'root';
+        $password = '';
 
-        $this->dbb = new PDO('mysql:host=localhost;dbname=newspaper;charset=utf8', $this->username, $this->password);
+        $dbb = new PDO('mysql:host=localhost;dbname=newspaper;charset=utf8', $username, $password);
+
+        return $dbb;
         
     }
 }

@@ -26,6 +26,13 @@
     --color-p3-o5: rgba(52, 73, 189,0.9);
     --color-p3-o6: rgb(52, 73, 189);
 
+    --color-p4-o1: rgba(52, 189, 93, 0.1);
+    --color-p4-o2: rgba(52, 189, 93, 0.3);
+    --color-p4-o3: rgba(52, 189, 93, 0.5);
+    --color-p4-o4: rgba(52, 189, 93, 0.7);
+    --color-p4-o5: rgba(52, 189, 93, 0.9);
+    --color-p4-o6: rgb(52, 189, 93);
+
     --font1: 'Poppins', sans-serif;
     --font2: 'Nunito', sans-serif;
 

@@ -6,7 +6,7 @@
 <main>
     <div id="form-inscription" class="container-form">
         <h1>World News</h1>
-        <form  action="../index.php" method="post">
+        <form  action="../index.php?action=inscription" method="post">
             <h2>Inscription</h2>
             <div>
                 <label for="pseudoI">Pseudo</label>
@@ -19,24 +19,28 @@
                 <p></p>
             </div>
             <div>
-                <label for="emailIC">Email</label>
-                <input type="email" id="emailIC" name="emailIC" placeholder="Email">
+                <label for="passwordI">Password</label>
+                <input type="password" id="passwordI" name="passwordI" placeholder="Password">
                 <p></p>
             </div>
             <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password">
+                <label for="passwordIC">Password Confirmed</label>
+                <input type="password" id="passwordIC" name="passwordIC" placeholder="Password">
                 <p></p>
             </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Password">
-                <p></p>
+            <div class="radio">
+                <div>
+                    <input type="radio" id="radio1" name="statusI" value="1" checked>
+                    <label for="radio1">Lecteur</label>
+                </div>
+                <div>
+                    <input type="radio" id="radio2" name="statusI" value="2">
+                    <label for="radio2">Chroniqueur</label>
+                </div>
             </div>
             <div>
                 <input type="submit" value="Valider">
             </div>
-            <a href="../index.php?action=inscription">Vous n'avez pas encore de compte?</a>
         </form>
     </div>
     <div class="diagonal">

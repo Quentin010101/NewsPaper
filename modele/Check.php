@@ -28,8 +28,11 @@ class Check
             throw new Exception('mot de passe invalide');
             exit;
         }
-        $patern = '/[0-9A-Za-z]/'; // Valeur requise pour mdp
-        if(preg_match($password, $patern)){
+        $patern = '/[0-9]/'; // Valeur requise pour mdp
+        $patern1 = '/[A-Z]/'; 
+        $patern2 = '/[a-z]/'; 
+
+        if(!preg_match($patern, $password) && !preg_match($patern1, $password) && !preg_match($patern2, $password)){
             throw new Exception('Maj, min, number required');
             exit;
         }

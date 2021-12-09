@@ -1,8 +1,9 @@
 <?php 
-session_start();
 
+require_once('./modele/Database.php');
+require_once('./modele/Check.php');
 
-class LogIn extends Database{
+class Connexion extends Database{
 
     private $pseudo;
     private $email;
@@ -12,8 +13,9 @@ class LogIn extends Database{
     public function __construct($email, $password)
     {
         $query = 'SELECT * FROM user WHERE email = ?';
-        $stmt = $this->dbb->prepare($query);
-        $request = $stmt->execute(array($email));
+        $stmt = self::connect()->prepare($query);
+        $stmt->execute(array($email));
+        $request = $stmt->fetch();
 
         $count = $stmt->rowCount();
 
@@ -32,10 +34,10 @@ class LogIn extends Database{
 
     public function startSession(){
 
-        $_SESION['pseudo'] = $this->pseudo;
-        $_SESION['email'] = $this->email;
-        $_SESION['status'] = $this->status;
-        $_SESION['id'] = $this->id;
+        $_SESSION['pseudo'] = $this->pseudo;
+        $_SESSION['email'] = $this->email;
+        $_SESSION['status'] = $this->status;
+        $_SESSION['id'] = $this->id;
 
     }
 }

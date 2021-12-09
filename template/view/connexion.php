@@ -6,7 +6,7 @@
 <main>
     <div class="container-form">
         <h1>World News</h1>
-        <form action="../index.php" method="post">
+        <form action="../index.php?action=connexion" method="post">
             <h2>Connexion</h2>
             <div>
                 <label for="email">Email</label>

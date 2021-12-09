@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-p1-o1: rgba(255,255,255,0.1);
+    --color-p1-o2: rgba(255,255,255,0.3);
+    --color-p1-o3: rgba(255,255,255,0.5);
+    --color-p1-o4: rgba(255,255,255,0.7);
+    --color-p1-o5: rgba(255,255,255,0.9);
+    --color-p1-o6: rgba(255,255,255,1);
+
+    --color-p2-o1: rgba(0, 0, 0, 0.1);
+    --color-p2-o2: rgba(0, 0, 0, 0.3);
+    --color-p2-o3: rgba(0, 0, 0, 0.5);
+    --color-p2-o4: rgba(0, 0, 0, 0.7);
+    --color-p2-o5: rgba(0, 0, 0, 0.9);
+    --color-p2-o6: rgb(0, 0, 0);
+
+    --color-p3-o1: rgba(52, 73, 189,0.1);
+    --color-p3-o2: rgba(52, 73, 189,0.3);
+    --color-p3-o3: rgba(52, 73, 189,0.5);
+    --color-p3-o4: rgba(52, 73, 189,0.7);
+    --color-p3-o5: rgba(52, 73, 189,0.9);
+    --color-p3-o6: rgb(52, 73, 189);
+
+    --font1: 'Poppins', sans-serif;
+    --font2: 'Nunito', sans-serif;
+
+    --trans0: all 0.2s linear;
+    --trans1: all 0.4s linear;
+    --trans2: all 0.6s linear;
+    --trans3: all 0.8s linear;
+    --trans4: all 1s linear;
+
+    --bs-p1-1: 0.1em 0.1em 0.1em var(--color-p1-o1);
+    --bs-p1-2: 0.15em 0.15em 0.15em var(--color-p1-o2);
+    --bs-p2-1: 0.1em 0.1em 0.1em var(--color-p2-o1);
+    --bs-p2-2: 0.15em 0.15em 0.15em var(--color-p2-o2);
+    --bs-p3-1: 0.1em 0.1em 0.1em var(--color-p3-o1);
+    --bs-p3-2: 0.15em 0.15em 0.15em var(--color-p3-o2);
+
+}
+
+body{
+    font-family: var(--font1);
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#accueil{
+
+}
+
+#accueil .container-carrousel{
+    width: 100%;
+    height: 300px;
+    border: solid;
+}
+#accueil .carrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 2%;
+}
+#accueil .button{
+    position: absolute;
+    z-index: 1;
+}
+#accueil .buttonL{
+    top: 50%;
+    left: 5%;
+}
+#accueil .buttonR{
+    top: 50%;
+    right: 5%;
+}
+#accueil .box{
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background-color: aquamarine;
+    border: solid;
+}
+/* //-------------------container news ---------------- */
+
+#accueil .container-main{
+    display: flex;
+    border: solid;
+    height: 800px;
+}
+#accueil .container-main .index{
+    width: 30%;
+    border: solid;
+
+}
+#accueil .container-main .container-type{
+    width: 70%;
+    border: solid;
+
+}
+#accueil .container-main .container-type > div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1200px){
+    #accueil .box{
+        width: 45%;
+    } 
+    #accueil .carrousel{
+        padding-left: 2.8%;
+    }
+}
+@media (max-width: 800px){
+    #accueil .box{
+        width: 90%;
+    } 
+    #accueil .carrousel{
+        padding-left: 5%;
+    }
+}

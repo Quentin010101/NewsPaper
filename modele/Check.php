@@ -35,10 +35,40 @@ class Check
         }
     }
 
+    // verifier si les password sont identique
+    public static function checkSame($password, $passwordConfirmed){
+        if($password != $passwordConfirmed){
+            throw new Exception('les mot de passe sont different');
+            exit;
+        }
+    }
+
+    //verifier si email valid
+    public static function checkEmail($email){
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            throw new Exception('l\'email n\'est pas valid ');
+            exit;
+        }
+    }
+
+    //-------------------------------------------------------------------------------------
+
+
+
 }
 
 class Hash
 {
     // hachage mdp
+    public static function hachage($password){
+        return password_hash($password, PASSWORD_DEFAULT);
+    }
+
+    //verification si mdp correspond
+    public static function checkHachage($password, $passworConfirmed){
+        if(!password_verify($password, $passworConfirmed)){
+            throw new Exception('Les mots de passe ne correspondent pas');
+        }
+    }
     
 }

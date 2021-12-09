@@ -1,0 +1,165 @@
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(255,255,255,0.4);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container-form {
+    z-index: 1;
+    margin-top: 20vh;
+}
+.container-form h1 {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.container-form h2 {
+    color: var(--color-p3-o6);
+}
+.container-form h1,
+.container-form h2 {
+    font-family: var(--font2);
+}
+form {
+    border: solid 1px var(--color-p3-o2);
+    padding: 40px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    width: max(320px, 400px);
+    border-radius: 10px;
+    font-size: 1.1em;
+    box-shadow: var(--bs-p2-2);
+}
+#form-inscription{
+    margin-top: 10vh;
+}
+#form-inscription form{
+    width: max(320px, 500px);
+}
+#form-inscription form > div {
+    margin: 10px 0;
+}
+form > div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+form > div label {
+    letter-spacing: 0px;
+    transition: var(--trans2);
+}
+form > div:nth-child(2):hover label, form > div:nth-child(3):hover label {
+    letter-spacing: 1px;
+    transition: var(--trans2);
+}
+form > div:nth-child(2):hover input, form > div:nth-child(3):hover input {
+    border: solid 1px var(--color-p2-o2);
+    transition: var(--trans2);
+}
+form input {
+    height: 40px;
+}
+form label {
+    margin: 5px 0;
+    font-family: var(--font2);
+}
+form input[type="email"],
+form input[type="password"] {
+    padding-left: 5px;
+    border-radius: 10px;
+    border: solid 1px var(--color-p2-o1);
+    transition: var(--trans2);
+}
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    outline: none;
+    border: solid 1px var(--color-p2-o1);
+}
+
+form input[type="submit"] {
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--color-p3-o6);
+    color: var(--color-p1-o5);
+    border: 1px transparent solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--trans0);
+}
+form input[type="submit"]:hover {
+    letter-spacing: 1px;
+    border: 1px var(--color-p3-o6) solid;
+    background-color: var(--color-p1-o6);
+    color: var(--color-p3-o6);
+    transition: var(--trans0);
+}
+form a{
+    color: var(--color-p3-o4);
+    font-size: 0.8em;
+    margin: 0 auto;
+    transition: var(--trans2);
+}
+form a:hover{
+    letter-spacing: 0.3px;
+    transition: var(--trans2);
+}
+.diagonal{
+    z-index: -1;
+    position: absolute;
+    width: 120%;
+    height: 70%;
+    transform: translateY(50%) rotateZ(-35deg) ;
+}
+.diagonal > div{
+    position: relative;
+    box-shadow: var(--bs-p2-2);
+}
+.diagonal > div:nth-child(1){
+    height: 15%;
+    width: 20%;
+    background-color: var(--color-p3-o4);
+    transform: skewX(30deg);
+    animation: tra1 7s 1s infinite ease alternate;
+}
+.diagonal > div:nth-child(2){
+    height: 15%;
+    width: 15%;
+    background-color: var(--color-p2-o1);
+    animation: tra2 8s infinite linear;
+    margin-top: 2%;
+}
+.diagonal > div:nth-child(3){
+    height: 15%;
+    width: 20%;
+    background-color: var(--color-p3-o6);
+    border: 1px solid var(--color-p2-o1);
+    animation: tra3 8s infinite ease alternate;
+    margin-top: 0.5%
+}
+.diagonal > div:nth-child(4){
+    height: 15%;
+    width: 20%;
+    background-color: var(--color-p3-o3);
+    animation: tra1 9s infinite ease alternate;
+    margin-top: 1%;
+}
+@keyframes tra1 {
+    from{ transform: skewX(30deg)}
+    to{ transform: skewX(30deg) translateX(400%)}
+} 
+@keyframes tra2 {
+    0%{ transform: skewX(30deg) translateX(300%)}
+    50%{ transform: skewX(30deg) translateX(0%)}
+    80%{ transform: skewX(30deg) translateX(600%)}
+    100%{ transform: skewX(30deg) translateX(300%)}
+}
+@keyframes tra3 {
+    from{ transform: skewX(30deg) translateX(400%)}
+    to{ transform: skewX(30deg) translateX(0%)}
+} 
+

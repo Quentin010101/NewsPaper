@@ -1,5 +1,7 @@
 <?php $title = 'Connexion'; ?>
 <?php $css = '../public/css/inscriptionConnexion.css'; ?>
+<?php $cssAnimation = '<link rel="stylesheet" href="../public/css/animation.css">'; ?>
+
 
 <?php ob_start(); ?>
 

@@ -9,6 +9,7 @@
     <title><?php echo $title; ?></title>
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href=<?php echo $css; ?>>
+    <?php if(isset($cssAnimation)){ echo $cssAnimation; } ?>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +33,7 @@
             if(isset($_SESSION['pseudo']) && !empty($_SESSION['pseudo'])):
                 ?>
                 <p>Bonjour : <pan><?php echo htmlspecialchars($_SESSION['pseudo']);?></pan></p>
+                <a href="../index.php?action=publication"><ion-icon name="pencil-outline"></ion-icon></a>
                 <?php
             else:
                 ?>
@@ -50,5 +52,8 @@
     <footer>
 
     </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

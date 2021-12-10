@@ -1,0 +1,55 @@
+.diagonal{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    width: 120%;
+    height: 70%;
+    transform: translateY(50%) rotateZ(-35deg) ;
+}
+.diagonal > div{
+    position: relative;
+    box-shadow: var(--bs-p2-2);
+}
+.diagonal > div:nth-child(1){
+    height: 15%;
+    width: 20%;
+    background-color: var(--color-p3-o4);
+    transform: skewX(30deg);
+    animation: tra1 7s 1s infinite ease alternate;
+}
+.diagonal > div:nth-child(2){
+    height: 15%;
+    width: 15%;
+    background-color: var(--color-p2-o1);
+    animation: tra2 8s infinite linear;
+    margin-top: 2%;
+}
+.diagonal > div:nth-child(3){
+    height: 15%;
+    width: 20%;
+    background-color: var(--color-p3-o6);
+    border: 1px solid var(--color-p2-o1);
+    animation: tra3 8s infinite ease alternate;
+    margin-top: 0.5%
+}
+.diagonal > div:nth-child(4){
+    height: 15%;
+    width: 20%;
+    background-color: var(--color-p3-o3);
+    animation: tra1 9s infinite ease alternate;
+    margin-top: 1%;
+}
+@keyframes tra1 {
+    from{ transform: skewX(30deg)}
+    to{ transform: skewX(30deg) translateX(400%)}
+} 
+@keyframes tra2 {
+    0%{ transform: skewX(30deg) translateX(300%)}
+    50%{ transform: skewX(30deg) translateX(0%)}
+    80%{ transform: skewX(30deg) translateX(600%)}
+    100%{ transform: skewX(30deg) translateX(300%)}
+}
+@keyframes tra3 {
+    from{ transform: skewX(30deg) translateX(400%)}
+    to{ transform: skewX(30deg) translateX(0%)}
+} 

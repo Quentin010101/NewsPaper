@@ -1,0 +1,110 @@
+
+main{
+    padding: 40px 40px;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.content h1{
+    font-family: var(--font2);
+}
+.content h1 span{
+    color: var(--color-p3-o6);
+}
+.content h2{
+    margin: 40px 0;
+}
+.espace{
+    display: flex;
+    gap: 40px;
+}
+.espace-publication{
+    padding: 20px;
+    background-color: var(--color-p1-o5);
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: var(--bs-p2-2);
+}
+.espace-post{
+    padding: 20px;
+    background-color: var(--color-p1-o5);
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: var(--bs-p2-2);
+}
+form > div{
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    margin: 10px 0;
+}
+form textarea{
+    resize: none;
+    padding: 10px;
+}
+form input{
+    height: 40px;
+}
+form input:focus, form textarea:focus {
+    outline: none;
+}
+form input[type='submit']{
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-p3-o6);
+    transition: var(--trans0);
+    width: 150px;
+    margin: 20px 0;
+}
+form input[type='submit']:hover{
+    border: 1px solid var(--color-p3-o6);
+    background-color: var(--color-p1-o6);
+    color: var(--color-p3-o6);
+    transition: var(--trans0);
+}
+form input[type='file']{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+}
+.container-file{
+    position: relative;
+    background-color: var(--color-p3-o6);
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: var(--color-p1-o6);
+    border-radius: 10px;
+    transition: var(--trans0);
+}
+.container-file:hover{
+    background-color: var(--color-p1-o6);
+    color: var(--color-p3-o6);
+    border: var(--color-p3-o6) solid 1px;
+    transition: var(--trans0);
+}
+.container-file label{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    cursor: pointer; 
+    z-index: 1;
+    border-radius: 10px;
+
+}
+.container-file ion-icon{
+    font-size: 1.3em;
+}
+
+
+
+

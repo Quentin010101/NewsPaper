@@ -10,7 +10,7 @@ try{
     if(isset($_GET['action']) && !empty($_GET['action'])){
         redirect($_GET['action']);
     }else{
-        require_once('./template/view/accueil.php');
+        require_once('./controller/accueil.ctr.php');
     }
 
 }catch(Exception $e){

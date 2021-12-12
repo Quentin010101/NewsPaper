@@ -10,14 +10,17 @@
 
 #accueil .container-carrousel{
     width: 100%;
-    height: 300px;
-    border: solid;
+    height: 350px;
+    z-index: 1;
 }
 #accueil .carrousel{
     position: relative;
     width: 100%;
     height: 100%;
     padding-left: 2%;
+}
+#accueil .container-carrousel a{
+    color: var(--color-p2-o5);
 }
 #accueil .button{
     position: absolute;
@@ -36,12 +39,69 @@
     position: absolute;
     height: 100%;
     width: 30%;
-    background-color: aquamarine;
-    border: solid;
+    background-color: var(--color-p3-o1);
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--bs-p2-2);
+    cursor: pointer;
+}
+.box h2{
+    font-size: 1.1em;
+    color: var(--color-p2-o4);
+}
+.box h3{
+    font-size: 0.9em;
+    color: var(--color-p3-o4);
+    margin: 10px 0;
+}
+.box .content{
+    max-height: 70%;
+    width: 100%;
+}
+.box p{
+    height: 100%;
+    font-size: 0.80em;
+}
+.box img{
+    position: relative;
+    max-height: 50%;
+    max-width: 40%;
+    text-align: center;
+    float: left;
+    margin: 0 20px 2px 0;
+    box-shadow: var(--bs-p2-2);
+    border: solid 2px var(--color-p1-o4);
+}
+.view{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+    background-image: linear-gradient(0deg, var(--color-p1-o6), var(--color-p1-o1));
+}
+.view span{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.view span:nth-child(1){
+    font-style: italic;
+    color:var(--color-p2-o5);
+}
+.view span ion-icon{
+    margin-right: 5px;
 }
 /* //-------------------container news ---------------- */
 
 #accueil .container-main{
+    z-index: 0;
+    margin-top: 100px;
     display: flex;
     border: solid;
     height: 800px;

@@ -36,7 +36,6 @@ class Inscription extends Database
 
     }
 
-
 }
 
 

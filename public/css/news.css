@@ -1,0 +1,83 @@
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    color: var(--color-p3-o5);
+    font-family: var(--font2);
+}
+hr{
+    width: 75%;
+    align-self: center;
+    color: var(--color-p4-o2);
+}
+.box-news{
+    position: relative;
+    display: flex;
+    margin: 20px 40px;
+    padding: 10px;
+    box-shadow: var(--bs-p2-2);
+    height: 250px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.box-news img{
+    min-width: 300px;
+}
+.box-news h2{
+    font-family: var(--font2);
+    color: var(--color-p2-o5)
+}
+.box-news h3{
+    font-family: var(--font1);
+    color: var(--color-p3-o4);
+    font-size: 0.9em;
+}
+.box-news > div{
+    margin-left: 20px;
+}
+.box-news .titre{
+    margin-bottom: 5px;
+}
+.box-news .text{
+    position: relative;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+    border-top: 1px solid var(--color-p2-o3);
+    border-bottom: 1px solid var(--color-p2-o3);
+    background-image: linear-gradient(0deg, var(--color-p1-o6), var(--color-p1-o3));
+}
+.box-news .text div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(0deg, var(--color-p1-o5), var(--color-p1-o1));
+}
+.box-news .text p{
+    padding: 5px 20px;
+    font-size: 0.8em;
+    color: var(--color-p2-o5);
+}
+.box-news:hover .text{
+    max-height: 100px;
+    transition: all 0.3s ease-in;
+}
+.box-news .view{
+    margin-top: 5px;
+    color: var(--color-p2-o6);
+
+}
+
+@media (max-width: 700px){
+    .box-news{
+        flex-direction: column;
+        height: auto;
+    }
+}

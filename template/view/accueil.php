@@ -7,38 +7,33 @@
     <div class="container-carrousel">
         <h1>En tendance</h1>
         <div class="carrousel">
-            <div class="box">
-                <div class="title">
-                    <h2>Lorem, ipsum.</h2>
-                </div>
-                <div class="image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/BBC_News_2019.svg/220px-BBC_News_2019.svg.png" alt="">
-                </div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ea accusamus praesentium tempora? Consectetur, quisquam at quos odit nostrum laborum?</p>
-                    <span>View 36</span>
-                </div>
-            </div>
-            <div class="box">
-                <div class="title"></div>
-                <div class="image"></div>
-                <div class="content"></div>
-            </div>
-            <div class="box">
-                <div class="title">3</div>
-                <div class="image"></div>
-                <div class="content"></div>
-            </div>
-            <div class="box">
-                <div class="title">4</div>
-                <div class="image"></div>
-                <div class="content"></div>
-            </div>
-            <div class="box">
-                <div class="title">5</div>
-                <div class="image"></div>
-                <div class="content"></div>
-            </div>
+            <?php
+            if(isset($requestsTendance)):
+                foreach($requestsTendance as $request) :
+                    ?>
+                    <a href="<?php echo '../index.php?action=new&id=' . $request['id']; ?>">
+                        <div class="box">
+                            <div class="title">
+                                <h2><?php echo $request['title']; ?></h2>
+                                <h3><?php echo $request['objet']; ?></h3>
+                            </div>
+                            <div class="image">
+                                <img src="<?php echo '../ImageArticleStockage/' . $request['photo'];?>" alt="">
+                            </div>
+                            <div class="content">
+                                <p><?php echo $request['content']; ?></p>
+                            </div>
+                            <div class="view">
+                                <span>Posté le: <?php echo $request['dataActu']; ?></span>
+                                <span><ion-icon name="eye-outline"></ion-icon><?php echo $request['view']; ?></span>
+                            </div>
+                        </div>
+                    </a>
+                    <?php
+                endforeach;
+            endif;
+            ?>
+
             <button class="button buttonL">Left</button>
             <button class="button buttonR">Right</button>
 

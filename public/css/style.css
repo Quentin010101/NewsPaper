@@ -60,3 +60,17 @@ li{
 a{
     text-decoration: none;
 }
+
+/* Style boutton */
+.button-style{
+    background-color: var(--color-p3-o6);
+    border: 1px solid transparent;
+    color: var(--color-p1-o6);
+    transition: var(--trans1);
+}
+.button-style:hover{
+    background-color: var(--color-p1-o6);
+    color: var(--color-p3-o6);
+    border: 1px solid var(--color-p3-o6);
+    transition: var(--trans1);
+}

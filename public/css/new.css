@@ -1,0 +1,131 @@
+main{
+    padding: 0 20px;
+}
+.box-news, .comment-news{
+    display: flex;
+    flex-direction: column;
+    margin: 0 25vw;
+}
+img{
+    width: 20vw;
+    align-self: center;
+    padding: 20px;
+    border: solid var(--color-p2-o4) 3px;
+    box-shadow: var(--bs-p2-2);
+}
+h2{
+    color: var(--color-p3-o5);
+}
+h3{
+    color: var(--color-p2-o4); 
+}
+.titre{
+    margin:  20px auto;
+}
+.view{
+    margin-bottom: 20px;
+}
+.view p:nth-child(1){
+    font-style: italic;
+    color: var(--color-p4-o5);
+}
+.text{
+    margin: 0 2vw;
+}
+
+.comment-news{
+    padding-top: 40px;
+}
+.comment-news h4{
+    font-size: 1.2em;
+    color: var(--color-p3-o5);
+}
+.comments > p:nth-child(1){
+    color:var(--color-p2-o4);
+    font-size: 0.8em;
+}
+.comments > p:nth-child(2){
+    color:var(--color-p4-o5);
+    font-size: 0.8em;
+    font-style: italic;
+}
+.comments > p:nth-child(3){
+    margin-top: 5px;
+    font-size: 0.9em;
+    font-family: var(--font2);
+}
+.comments{
+    padding: 10px;
+}
+.comments > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8em;
+}
+.trait{
+    width: 90%;
+    text-align: center;
+    padding: 0 20px;
+}
+.trait hr{
+    color: var(--color-p2-o3);
+}
+.lien{
+    width: 10%;
+}
+.lien a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-p3-o5);
+}
+
+.ajout{
+    padding: 20px 0;
+}
+.ajout form{
+    display: flex;
+    flex-direction: column;
+}
+.ajout form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form > div label{
+    font-size: var(--font2);
+    color: var(--color-p3-o5)
+}
+form > div input{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+}
+form > div textarea{
+    resize: none;
+}
+.ajoutErreur p{
+    color: red;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+@media (max-width: 1200px){
+    .box-news, .comment-news{
+        margin: 0 10vw;
+    }
+    img{
+        width: 40vw;
+    }
+}
+@media (max-width: 700px){
+    .box-news, .comment-news{
+        margin: 0 5vw;
+        font-size: 0.9em;
+    }
+    img{
+        width: 60vw;
+    }
+}
